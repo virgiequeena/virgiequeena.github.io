@@ -278,6 +278,17 @@
       padding: 48px 32px;
     }
 
+    .hero .photo {
+      width: clamp(120px, 11vw, 150px);
+      height: auto;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid var(--butter-cream);
+      box-shadow: 0 10px 24px -12px rgba(126, 69, 85, .5);
+      margin-bottom: 18px;
+    }
+
     .hero .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -830,6 +841,7 @@
       .card { text-align: center; }
 
       .hero { padding: 52px 20px; min-height: 340px; }
+      .hero .photo { width: 112px; }
       .hero .eyebrow { flex-direction: column; gap: 6px; text-align: center; line-height: 1.6; }
       .hero h1 { font-size: 3.1rem; }
       .hero .intro { font-size: .7rem; letter-spacing: .16em; }
@@ -877,6 +889,7 @@
   <main class="board">
 
     <header class="card a-hero hero">
+      <img class="photo" src="photo.jpg" alt="Portrait of Virgie Queena Shallomitha" width="480" height="480">
       <span class="label eyebrow">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
         South Tangerang (Greater Jakarta), Indonesia
@@ -1071,7 +1084,7 @@
       </div>
       <h3>BINUS University</h3>
       <p class="sub">Bachelor of Computer Science, Data Science</p>
-      <div class="facts"><span>Aug 2024 &ndash; Expected 2028</span><span class="gpa">GPA 3.66</span></div>
+      <div class="facts"><span>Sep 2024 &ndash; Expected 2028</span><span class="gpa">GPA 3.66</span></div>
       <h4>Relevant Coursework</h4>
       <div class="pills">
         <span>Machine Learning</span><span>Deep Learning</span><span>Bayesian Data Analysis</span><span>Data Mining &amp; Visualization</span><span>Database Technology</span><span>Big Data Infrastructure</span><span>Model Deployment</span>
@@ -1262,6 +1275,15 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7"/><path d="M8 7v.01"/><path d="M12 17v-4a2 2 0 0 1 4 0v4"/><path d="M12 10v7"/></svg>
               </span>
               <span class="text"><span class="kind">LinkedIn</span><span class="value">Virgie Queena Shallomitha</span></span>
+              <span class="arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/s.virgiequeena/" target="_blank" rel="noopener">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5v.01"/></svg>
+              </span>
+              <span class="text"><span class="kind">Instagram</span><span class="value">@s.virgiequeena</span></span>
               <span class="arrow" aria-hidden="true">&rarr;</span>
             </a>
           </li>
