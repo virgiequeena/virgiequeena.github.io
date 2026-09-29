@@ -201,11 +201,14 @@
         "hero    hero    hero    flower  swatch  stripe"
         "hero    hero    hero    flower  swatch  swirl"
         "hero    hero    hero    flower  swatch  swirl"
-        "about   about   p1      p2      p3      stars"
-        "about   about   p1      p2      p3      stars"
-        "about   about   p1      p2      p3      stars"
-        "about   about   p1      p2      p3      zebra"
-        "blue    blue    p1      p2      p3      zebra"
+        "about   about   about   about   stars   zebra"
+        "about   about   about   about   stars   zebra"
+        "about   about   about   about   stars   zebra"
+        "blue    p1      p2      p3      p4      p5"
+        "blue    p1      p2      p3      p4      p5"
+        "blue    p1      p2      p3      p4      p5"
+        "blue    p1      p2      p3      p4      p5"
+        "blue    p1      p2      p3      p4      p5"
         "exp     exp     exp     exp     edu     edu"
         "exp     exp     exp     exp     edu     edu"
         "exp     exp     exp     exp     edu     edu"
@@ -245,6 +248,8 @@
     .a-p1      { grid-area: p1; }
     .a-p2      { grid-area: p2; }
     .a-p3      { grid-area: p3; }
+    .a-p4      { grid-area: p4; }
+    .a-p5      { grid-area: p5; }
     .a-stars   { grid-area: stars; }
     .a-zebra   { grid-area: zebra; }
     .a-exp     { grid-area: exp; }
@@ -452,6 +457,24 @@
     .chip-3 .b2 { background: var(--linen);      color: var(--cocoa); }
     .chip-3 .b3 { background: var(--rose-300);   color: var(--rose-900); }
     .chip-3 .b4 { background: var(--rose-700);   color: #fff; }
+
+    .chip-4 { background: #4F4A5C; }
+    .chip-4 .blob:nth-child(1) { width: 70%; height: 75%; left: -15%; top: -15%; background: var(--baby-blue); }
+    .chip-4 .blob:nth-child(2) { width: 60%; height: 65%; right: -15%; bottom: -15%; background: var(--rose-pink); }
+    .chip-4 .blob:nth-child(3) { width: 38%; height: 42%; left: 38%; top: 34%; background: var(--butter-cream); }
+    .chip-4 .b1 { background: var(--linen);      color: var(--cocoa); }
+    .chip-4 .b2 { background: #C7ECF8;          color: #2F5C6B; }
+    .chip-4 .b3 { background: var(--rose-500);   color: #fff; }
+    .chip-4 .b4 { background: var(--slate-blue); color: #fff; }
+
+    .chip-5 { background: #5E4F4B; }
+    .chip-5 .blob:nth-child(1) { width: 80%; height: 70%; right: -20%; top: -10%; background: var(--muted-gold); }
+    .chip-5 .blob:nth-child(2) { width: 60%; height: 60%; left: -10%; bottom: -15%; background: var(--rose-300); }
+    .chip-5 .blob:nth-child(3) { width: 35%; height: 40%; left: 30%; top: 25%; background: #fff; }
+    .chip-5 .b1 { background: var(--rose-pink);   color: var(--rose-900); }
+    .chip-5 .b2 { background: var(--butter-cream); color: var(--cocoa); }
+    .chip-5 .b3 { background: var(--muted-gold);  color: #fff; }
+    .chip-5 .b4 { background: var(--cocoa);       color: var(--butter-cream); border: 1px solid rgba(255,255,255,.12); }
 
     .more {
       padding: 34px 32px 28px;
@@ -777,6 +800,10 @@
           "p2      p2      p3      p3"
           "p2      p2      p3      p3"
           "p2      p2      p3      p3"
+          "p4      p4      p5      p5"
+          "p4      p4      p5      p5"
+          "p4      p4      p5      p5"
+          "p4      p4      p5      p5"
           "exp     exp     exp     exp"
           "edu     edu     awards  awards"
           "more    more    more    more"
@@ -902,8 +929,62 @@
       <span class="serif">02, Selected Work &rarr;</span>
     </div>
 
-    <a class="card a-p1 chip chip-1" href="https://github.com/virgiequeena/barista-ai-agent" target="_blank" rel="noopener" aria-label="Barista AI Agent on GitHub">
+    <a class="card a-p1 chip chip-1" href="https://github.com/virgiequeena/AWS-Credit-Score-Prediction" target="_blank" rel="noopener" aria-label="Credit Score Classification on GitHub">
       <div class="chip-preview"><span class="blob"></span><span class="blob"></span><span class="blob"></span><span class="no">NO. 01</span></div>
+      <div class="band b1">
+        <h3>Credit Score Classification</h3>
+        <div class="code"><span>End-to-End ML &middot; AWS</span><span>Jul 2026</span></div>
+      </div>
+      <div class="band b2">
+        <p>An end-to-end credit scoring system (Good / Standard / Poor) built on 25,000 messy customer records. Tuned XGBoost and Random Forest to 0.72 macro-F1, tracked training in MLflow, and deployed the model as a real-time AWS SageMaker endpoint with a Streamlit front end on EC2.</p>
+      </div>
+      <div class="band b3">
+        <span class="stack">Python &middot; scikit-learn &middot; XGBoost &middot; MLflow &middot; AWS SageMaker &middot; EC2 &middot; Streamlit</span>
+        <div class="code"><span>Stack</span></div>
+      </div>
+      <div class="band b4">
+        <span class="view">View on GitHub &rarr;</span>
+      </div>
+    </a>
+
+    <a class="card a-p2 chip chip-2" href="https://github.com/virgiequeena/satellite-autoencoder-gan" target="_blank" rel="noopener" aria-label="Satellite Image Generation and Compression on GitHub">
+      <div class="chip-preview"><span class="blob"></span><span class="blob"></span><span class="blob"></span><span class="no">NO. 02</span></div>
+      <div class="band b1">
+        <h3>Satellite Image Generation &amp; Compression</h3>
+        <div class="code"><span>Deep Learning &middot; Generative</span><span>Jun 2026</span></div>
+      </div>
+      <div class="band b2">
+        <p>A conditional DCGAN and a convolutional autoencoder for Overhead-MNIST satellite images. Redesigning a fully-connected GAN with convolutions and spectral normalization cut FID by 65% (484 &rarr; 171); the improved autoencoder raised reconstruction SSIM from 0.67 to 0.81.</p>
+      </div>
+      <div class="band b3">
+        <span class="stack">Python &middot; PyTorch &middot; GANs &middot; Autoencoders</span>
+        <div class="code"><span>Stack</span></div>
+      </div>
+      <div class="band b4">
+        <span class="view">View on GitHub &rarr;</span>
+      </div>
+    </a>
+
+    <a class="card a-p3 chip chip-3" href="https://github.com/virgiequeena/corn-leaf-disease-cnn" target="_blank" rel="noopener" aria-label="Corn Leaf Disease Classification on GitHub">
+      <div class="chip-preview"><span class="blob"></span><span class="blob"></span><span class="blob"></span><span class="no">NO. 03</span></div>
+      <div class="band b1">
+        <h3>Corn Leaf Disease Classification</h3>
+        <div class="code"><span>Deep Learning &middot; Computer Vision</span><span>Apr 2026</span></div>
+      </div>
+      <div class="band b2">
+        <p>An AlexNet built from scratch to classify 4 corn leaf diseases (4,188 images). Diagnosed why the baseline's training collapsed (from ~91% to ~56% validation accuracy) and redesigned it with batch normalization, regularization and learning-rate scheduling to train stably, reaching 93.0% test accuracy.</p>
+      </div>
+      <div class="band b3">
+        <span class="stack">Python &middot; TensorFlow/Keras &middot; CNN</span>
+        <div class="code"><span>Stack</span></div>
+      </div>
+      <div class="band b4">
+        <span class="view">View on GitHub &rarr;</span>
+      </div>
+    </a>
+
+    <a class="card a-p4 chip chip-4" href="https://github.com/virgiequeena/barista-ai-agent" target="_blank" rel="noopener" aria-label="Barista AI Agent on GitHub">
+      <div class="chip-preview"><span class="blob"></span><span class="blob"></span><span class="blob"></span><span class="no">NO. 04</span></div>
       <div class="band b1">
         <h3>Barista AI Agent</h3>
         <div class="code"><span>Guided Project &middot; Google Cloud</span><span>Aug 2026</span></div>
@@ -920,8 +1001,8 @@
       </div>
     </a>
 
-    <a class="card a-p2 chip chip-2" href="https://github.com/virgiequeena/AWS-Churn-Prediction" target="_blank" rel="noopener" aria-label="AWS Churn Prediction on GitHub">
-      <div class="chip-preview"><span class="blob"></span><span class="blob"></span><span class="blob"></span><span class="no">NO. 02</span></div>
+    <a class="card a-p5 chip chip-5" href="https://github.com/virgiequeena/AWS-Churn-Prediction" target="_blank" rel="noopener" aria-label="AWS Churn Prediction on GitHub">
+      <div class="chip-preview"><span class="blob"></span><span class="blob"></span><span class="blob"></span><span class="no">NO. 05</span></div>
       <div class="band b1">
         <h3>AWS Churn Prediction</h3>
         <div class="code"><span>ML Pipeline</span><span>Jun 2026</span></div>
@@ -931,24 +1012,6 @@
       </div>
       <div class="band b3">
         <span class="stack">Python &middot; scikit-learn &middot; FastAPI &middot; Streamlit &middot; AWS EC2</span>
-        <div class="code"><span>Stack</span></div>
-      </div>
-      <div class="band b4">
-        <span class="view">View on GitHub &rarr;</span>
-      </div>
-    </a>
-
-    <a class="card a-p3 chip chip-3" href="https://github.com/virgiequeena/study-assistant-chatbot" target="_blank" rel="noopener" aria-label="Study Assistant Chatbot on GitHub">
-      <div class="chip-preview"><span class="blob"></span><span class="blob"></span><span class="blob"></span><span class="no">NO. 03</span></div>
-      <div class="band b1">
-        <h3>Study Assistant Chatbot</h3>
-        <div class="code"><span>Guided Project &middot; Hacktiv8</span><span>Oct 2025</span></div>
-      </div>
-      <div class="band b2">
-        <p>A Streamlit AI study assistant built with LangChain and Google Gemini 2.5 Flash, which answers study questions in real time, summarizes material, and generates flashcards and quizzes. Built as a guided project in Hacktiv8's LLM-Based Tools and Gemini API Integration for Data Scientists program.</p>
-      </div>
-      <div class="band b3">
-        <span class="stack">Python &middot; Streamlit &middot; LangChain &middot; Gemini</span>
         <div class="code"><span>Stack</span></div>
       </div>
       <div class="band b4">
@@ -1040,17 +1103,10 @@
       <p class="intro-text">ML models built and deployed across cloud and local environments, mostly classification and prediction pipelines.</p>
       <ul class="more-list">
         <li>
-          <a href="https://github.com/virgiequeena/AWS-Credit-Score-Prediction" target="_blank" rel="noopener">
-            <span class="top"><span class="title">AWS Credit Score Prediction</span><span class="date">Jul 2026</span></span>
-            <span class="desc">Credit score prediction model deployed on AWS.</span>
-            <span class="tech">Python &middot; AWS</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/virgiequeena/Credit-Score-Prediction" target="_blank" rel="noopener">
-            <span class="top"><span class="title">Credit Score Prediction</span><span class="date">Jun 2026</span></span>
-            <span class="desc">Credit score prediction model.</span>
-            <span class="tech">Python</span>
+          <a href="https://credit-score-prediction-virgie.streamlit.app/" target="_blank" rel="noopener">
+            <span class="top"><span class="title">Credit Score Prediction (Live Demo)</span><span class="date">Jun 2026</span></span>
+            <span class="desc">Streamlit Cloud demo of the Credit Score Classification model.</span>
+            <span class="tech">Python &middot; XGBoost &middot; Streamlit</span>
           </a>
         </li>
         <li>
@@ -1075,6 +1131,13 @@
           </a>
         </li>
         <li>
+          <a href="https://churn-prediction-unified-virgie.streamlit.app/" target="_blank" rel="noopener">
+            <span class="top"><span class="title">Churn Prediction (Live Demo)</span><span class="date">Apr 2026</span></span>
+            <span class="desc">Streamlit Cloud demo of the unified churn prediction pipeline.</span>
+            <span class="tech">Python &middot; Streamlit</span>
+          </a>
+        </li>
+        <li>
           <a href="https://github.com/virgiequeena/Heart-Attack-Prediction" target="_blank" rel="noopener">
             <span class="top"><span class="title">Heart Attack Prediction</span><span class="date">Mar 2026</span></span>
             <span class="desc">Heart attack risk prediction model.</span>
@@ -1086,6 +1149,13 @@
             <span class="top"><span class="title">Iris Model Deployment</span><span class="date">Mar 2026</span></span>
             <span class="desc">Iris classification model, a deployment-focused exercise.</span>
             <span class="tech">Python</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/virgiequeena/study-assistant-chatbot" target="_blank" rel="noopener">
+            <span class="top"><span class="title">Study Assistant Chatbot</span><span class="date">Oct 2025</span></span>
+            <span class="desc">Streamlit study assistant with LangChain and Gemini that answers questions and generates flashcards and quizzes. Guided project, Hacktiv8.</span>
+            <span class="tech">Python &middot; LangChain &middot; Gemini</span>
           </a>
         </li>
       </ul>
