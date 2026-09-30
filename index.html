@@ -200,10 +200,10 @@
         "hero    hero    hero    flower  swatch  stripe"
         "hero    hero    hero    flower  swatch  stripe"
         "hero    hero    hero    flower  swatch  swirl"
-        "hero    hero    hero    flower  swatch  swirl"
-        "about   about   about   about   stars   zebra"
-        "about   about   about   about   stars   zebra"
-        "about   about   about   about   stars   zebra"
+        "hero    hero    hero    stars   swatch  swirl"
+        "about   about   about   about   zebra   zebra"
+        "about   about   about   about   zebra   zebra"
+        "about   about   about   about   zebra   zebra"
         "blue    p1      p2      p3      p4      p5"
         "blue    p1      p2      p3      p4      p5"
         "blue    p1      p2      p3      p4      p5"
@@ -278,17 +278,6 @@
       padding: 48px 32px;
     }
 
-    .hero .photo {
-      width: clamp(120px, 11vw, 150px);
-      height: auto;
-      aspect-ratio: 1;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid var(--butter-cream);
-      box-shadow: 0 10px 24px -12px rgba(126, 69, 85, .5);
-      margin-bottom: 18px;
-    }
-
     .hero .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -323,7 +312,30 @@
       place-items: center;
       background: var(--butter-cream);
     }
-    .flower svg { width: 62%; max-width: 130px; height: auto; }
+    .flower { padding: 16px; }
+    .portrait {
+      position: relative;
+      margin: 0;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+    }
+    .portrait img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 10px 22px -14px rgba(126, 69, 85, .55);
+    }
+    .portrait svg {
+      position: absolute;
+      left: -6%;
+      bottom: -6%;
+      width: 46%;
+      height: auto;
+      transform: rotate(-28deg);
+      filter: drop-shadow(0 3px 4px rgba(126, 69, 85, .25));
+    }
 
     .swatch, .duo { display: flex; flex-direction: column; }
     .swatch > div, .duo > div {
@@ -588,6 +600,8 @@
       opacity: .75;
     }
     .cert p { margin: 0; font-size: .8rem; line-height: 1.45; opacity: .92; }
+    .cert-link { display: inline-block; margin-top: 8px; font-size: .66rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid currentColor; }
+    .cert-link:hover { opacity: .7; }
 
     .exp { padding: 34px 32px 30px; display: flex; flex-direction: column; }
     .exp-grid {
@@ -824,6 +838,7 @@
           "duo     duo     duo     duo";
       }
       .chip-preview { min-height: 150px; }
+      .portrait { width: auto; height: 100%; }
       .duo { flex-direction: row; min-height: 150px; }
     }
 
@@ -841,7 +856,7 @@
       .card { text-align: center; }
 
       .hero { padding: 52px 20px; min-height: 340px; }
-      .hero .photo { width: 112px; }
+      .portrait { width: min(240px, 100%); height: auto; }
       .hero .eyebrow { flex-direction: column; gap: 6px; text-align: center; line-height: 1.6; }
       .hero h1 { font-size: 3.1rem; }
       .hero .intro { font-size: .7rem; letter-spacing: .16em; }
@@ -889,7 +904,6 @@
   <main class="board">
 
     <header class="card a-hero hero">
-      <img class="photo" src="photo.jpg" alt="Portrait of Virgie Queena Shallomitha" width="480" height="480">
       <span class="label eyebrow">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
         South Tangerang (Greater Jakarta), Indonesia
@@ -898,8 +912,10 @@
       <p class="intro">Data Science <span>|</span> AI &amp; Machine Learning</p>
     </header>
 
-    <div class="card a-flower flower" aria-hidden="true">
-      <svg viewBox="0 0 120 120">
+    <div class="card a-flower flower">
+      <figure class="portrait">
+      <img src="photo.jpg" alt="Portrait of Virgie Queena Shallomitha" width="600" height="800">
+      <svg viewBox="0 0 120 120" aria-hidden="true">
         <g transform="translate(60 60)">
           <g fill="#FFC5D0" stroke="#F2A9B9" stroke-width="1.5">
             <ellipse rx="17" ry="28" cy="-26" transform="rotate(0)" />
@@ -916,6 +932,7 @@
           <circle r="4" fill="#FFF6CC" />
         </g>
       </svg>
+      </figure>
     </div>
 
     <div class="card a-swatch swatch" aria-hidden="true">
@@ -1183,30 +1200,33 @@
         <article class="cert">
           <h3>Google Cloud Gen AI Academy APAC 2026 (Cohort 3)</h3>
           <div class="meta">Hack2Skill, on behalf of Google Cloud &middot; Aug &ndash; Sep 2026</div>
-          <p>Track 1: Build and Deploy a Customer-Facing AI Agent, using Gemini, Google's Agent Development Kit, Retrieval-Augmented Generation, and Cloud Run. Included a guided project: the Barista AI Agent.</p>
+          <p>Track 1: Build and Deploy a Customer-Facing AI Agent. Built the Barista AI Agent, a RAG chatbot that grounds its answers in real menu data using Gemini, Google&rsquo;s Agent Development Kit and Firestore vector search, and deployed it on Cloud Run.</p>
         </article>
         <article class="cert">
           <h3>Global Consumer Intelligence (GCI) World</h3>
           <div class="meta">Matsuo-Iwasawa Laboratory, The University of Tokyo &middot; Apr &ndash; Jul 2026</div>
-          <p>Fundamental theories and implementation of data science; passed the final assessment.</p>
+          <p>A data science course covering both theory and hands-on implementation. For the final assessment, framed telecom churn as a business proposal and built an XGBoost model on ~100,000 customers, identifying refurbished handsets and ageing equipment as early churn signals. Passed the final assessment.</p>
+          <a class="cert-link" href="https://canva.link/virgie-telecom-churn-retention-proposal" target="_blank" rel="noopener">View project deck &rarr;</a>
         </article>
         <article class="cert">
           <h3>AI Ethics; Introduction to Generative AI; Introduction to Artificial Intelligence</h3>
           <div class="meta">IBM SkillsBuild &middot; Apr &ndash; May 2026</div>
-          <p>Trustworthy AI (fairness, robustness, explainability, transparency, privacy), foundation models and transformers, prompt engineering, and core AI and machine learning concepts.</p>
+          <p>Three courses on responsible and practical AI: trustworthy AI principles (fairness, robustness, explainability, transparency and privacy), how foundation models and transformers work, prompt engineering, and core AI and machine learning concepts.</p>
         </article>
         <article class="cert">
           <h3>L'Or&eacute;al Brandstorm 2026, Certificate of Recognition, Team Leader</h3>
           <div class="meta">L'Or&eacute;al &middot; Apr 2026</div>
+          <p>L&rsquo;Or&eacute;al&rsquo;s global student innovation competition, on the 2026 L&rsquo;Or&eacute;al Luxe mission &ldquo;Craft the future of luxury fragrance&rdquo;. Led my team&rsquo;s concept, OLFA&Eacute;RA: a smart skin patch reads skin chemistry, unsupervised ML groups skin profiles into scent-compatibility types, and a ranking model recommends each customer&rsquo;s top five fragrances, with AI-guided layering and refill timing.</p>
         </article>
         <article class="cert">
           <h3>LLM-Based Tools and Gemini API Integration for Data Scientists</h3>
           <div class="meta">Hacktiv8, Google.org &amp; ADB &middot; Oct 2025</div>
-          <p>Included a guided project: the Study Assistant Chatbot, built with LangChain and Gemini.</p>
+          <p>A 15-hour program on building LLM-powered tools with the Gemini API. Built the Study Assistant Chatbot with LangChain and Gemini 2.5 Flash, which answers study questions, summarizes material, and generates flashcards and quizzes.</p>
         </article>
         <article class="cert">
           <h3>Data Classification and Summarization Using IBM Granite</h3>
           <div class="meta">IBM &middot; May 2025</div>
+          <p>Two hands-on labs prompting IBM Granite language models: classifying customer-support tickets into categories and summarizing text, then tuning model parameters to refine the output. Completed both modules.</p>
         </article>
       </div>
     </section>
